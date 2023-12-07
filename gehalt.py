@@ -47,11 +47,15 @@ def sum_of_values(employee_and_salary):
 
     return sum
 
+# 5) Erstellen Sie eine Textausgabe der Gehältern und Namen der Mitarbeiter in aufsteingender
+#    Reihenfolge. Die Funktion heisst print_salary mit dem Parameter dictionary.
+
 # 1) Erstellen Sie ein Dictionary mit Mitarbeitern und Gehalt.
 employee_and_salary = dict()
 
 employee_and_salary["Franz Mayer"] = 2123.76
 employee_and_salary["Hans Petersen"] = 3421.45
+employee_and_salary["Hans Franz"] = 1421.45
+employee_and_salary["Hans Mayer"] = 5421.45
 
-sum = sum_of_values(employee_and_salary)
-print(sum)
+print(employee_and_salary)
