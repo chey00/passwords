@@ -25,6 +25,16 @@ def add_employee(employee_and_salary):
 #    In der Funktion werden ehemalige Mitarbeiter aus dem Parameter gelöscht.
 #    Es soll eine Sicherheitsabfrage stattfinden, ob der Mitarbeiter wirklich
 #    gelöscht werden soll.
+def remove_employee(dictionary):
+    employee = input("Welchen Mitarbeiter möchten Sie entfernen? ")
+
+    if employee in dictionary:
+        confirm = "JahA"
+        output_text = "Möchten Sie den Mitarbeiter " + employee + " wirklich löschen (" + confirm + ")? "
+        overwrite = input(output_text)
+
+        if overwrite == confirm:
+            dictionary.pop(employee)
 
 # 1) Erstellen Sie ein Dictionary mit Mitarbeitern und Gehalt.
 employee_and_salary = dict()
@@ -32,7 +42,7 @@ employee_and_salary = dict()
 employee_and_salary["Franz Mayer"] = 2123.76
 employee_and_salary["Hans Petersen"] = 3421.45
 
-add_employee(employee_and_salary)
-add_employee(employee_and_salary)
+remove_employee(employee_and_salary)
+remove_employee(employee_and_salary)
 
 print(employee_and_salary)
