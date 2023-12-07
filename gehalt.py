@@ -36,8 +36,16 @@ def remove_employee(dictionary):
         if overwrite == confirm:
             dictionary.pop(employee)
 
-# 4) Deklarien Sie eine Funktion sum mit dem Parameter employee_and_salary.
+# 4) Deklarien Sie eine Funktion sum_of_values mit dem Parameter employee_and_salary.
 #    Die Funktion bildet die Summe über alle im Wörterbuch hinterlegten Gehälter.
+def sum_of_values(employee_and_salary):
+#    return sum(employee_and_salary.values())
+    sum = 0.0
+
+    for salary in employee_and_salary.values():
+        sum += salary
+
+    return sum
 
 # 1) Erstellen Sie ein Dictionary mit Mitarbeitern und Gehalt.
 employee_and_salary = dict()
@@ -45,7 +53,5 @@ employee_and_salary = dict()
 employee_and_salary["Franz Mayer"] = 2123.76
 employee_and_salary["Hans Petersen"] = 3421.45
 
-remove_employee(employee_and_salary)
-remove_employee(employee_and_salary)
-
-print(employee_and_salary)
+sum = sum_of_values(employee_and_salary)
+print(sum)
