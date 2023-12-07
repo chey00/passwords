@@ -25,6 +25,11 @@ def add_user(names_and_passwords):
 
         return True
 
+# 2) Erstellen Sie eine Funktion remove_user mit dem Parameter user_and_passwords.
+#    Bei Aufruf der Funktion wird der Anwender nach einem Benutzernamen gefragt.
+#    Ist der Benutzer vorhanden, erscheint eine Sicherheitsabfrage, ob der Benutzername wirklich
+#    gelöscht werden soll. Erst dann wird der Benutzer gelöscht. Ist der Benutzername nicht
+#    vorhanden, erscheint eine Fehlermeldung.
 
 dictionary = { "hans": "ABCD1234",
                "peter": "ABCD1234",
