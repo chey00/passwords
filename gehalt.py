@@ -21,8 +21,12 @@ def add_employee(employee_and_salary):
 
         employee_and_salary[employee] = salary
 
+# 3) Erstellen Sie eine Funktion remove_employee mit dem Parameter dictionary.
+#    In der Funktion werden ehemalige Mitarbeiter aus dem Parameter gelöscht.
+#    Es soll eine Sicherheitsabfrage stattfinden, ob der Mitarbeiter wirklich
+#    gelöscht werden soll.
 
-# Erstellen Sie ein Dictionary mit Mitarbeitern und Gehalt.
+# 1) Erstellen Sie ein Dictionary mit Mitarbeitern und Gehalt.
 employee_and_salary = dict()
 
 employee_and_salary["Franz Mayer"] = 2123.76
