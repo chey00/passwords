@@ -30,12 +30,32 @@ def add_user(names_and_passwords):
 #    Ist der Benutzer vorhanden, erscheint eine Sicherheitsabfrage, ob der Benutzername wirklich
 #    gelöscht werden soll. Erst dann wird der Benutzer gelöscht. Ist der Benutzername nicht
 #    vorhanden, erscheint eine Fehlermeldung.
+def remove_user(user_and_passwords):
+    username = input("Geben Sie einen Benutzernamen ein: ")
+
+    if username in user_and_passwords:
+        delete_username = input("Wollen Sie den Benutzer " + username + " löschen? (Ja) ")
+
+        if delete_username == "ja" or delete_username == "Ja":
+            user_and_passwords.pop(username)
+
+            print("Benuter " + username + " gelöscht")
+    else:
+        print("Benuter " + username + " nicht gefunden.")
+
+# 3) Erstellen Sie eine Funktion change_password mit dem Parameter users_and_passwords.
+#    Die Funktion fragt zuerst den Benutzername ab, dessen Kennwort geändert werden soll
+#    und überprüft das alte Kennwort. Ist die Eingabe korrekt gibt der Benutzer sein
+#    neues Kennwort ein. Ist das Kennwort bereits bei einen anderem Nutzer gespeichert,
+#    wiederholt sich die Eingabe.
+
 
 dictionary = { "hans": "ABCD1234",
                "peter": "ABCD1234",
                "root": "2t23$&fdsgeFJZ"}
 
-add_user(dictionary)
+remove_user(dictionary)
+
 '''
 while True:
     if check_login(dictionary):
