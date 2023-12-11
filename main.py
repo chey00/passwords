@@ -48,13 +48,33 @@ def remove_user(user_and_passwords):
 #    und überprüft das alte Kennwort. Ist die Eingabe korrekt gibt der Benutzer sein
 #    neues Kennwort ein. Ist das Kennwort bereits bei einen anderem Nutzer gespeichert,
 #    wiederholt sich die Eingabe.
+def change_password(users_and_passwords):
+    while True:
+        username = input("Benutzername: ")
 
+        if username in users_and_passwords.keys():
+            break
+        elif username == "exit":
+            return False
+
+    password = input("Altes Passwort:     ")
+    if password == users_and_passwords[username]:
+        while True:
+            new_password = input("Neues Passwort: ")
+
+            if new_password in users_and_passwords.values():
+                print("Kennwort wird bereits von einem anderen Benutzer verwendet.")
+            else:
+                users_and_passwords[username] = new_password
+
+                break
 
 dictionary = { "hans": "ABCD1234",
                "peter": "ABCD1234",
                "root": "2t23$&fdsgeFJZ"}
 
-remove_user(dictionary)
+change_password(dictionary)
+print(dictionary)
 
 '''
 while True:
