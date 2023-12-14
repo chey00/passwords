@@ -56,6 +56,8 @@ def change_password(users_and_passwords):
             break
         elif username == "exit":
             return False
+        else:
+            print("Benutzername ungültig.")
 
     password = input("Altes Passwort:     ")
     if password == users_and_passwords[username]:
@@ -68,6 +70,8 @@ def change_password(users_and_passwords):
                 users_and_passwords[username] = new_password
 
                 break
+    else:
+        print("Kennwort ungültig.")
 
 dictionary = { "hans": "ABCD1234",
                "peter": "ABCD1234",
